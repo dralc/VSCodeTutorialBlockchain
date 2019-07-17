@@ -37,11 +37,11 @@ async function main() {
 
     console.log('\nSubmit query transaction.');
 
-    const contract = await network.getContract('demoContract');
+    const contract = await network.getContract('ibm-bp');
 
     console.log('\nSubmit hello world transaction.');
 
-    let response = await contract.evaluateTransaction('query', 'GREETING');
+    let response = await contract.evaluateTransaction('query', 'arvind@ibm.com');
 
     console.log(JSON.parse(response.toString()))
 
